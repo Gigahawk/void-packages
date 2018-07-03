@@ -1,0 +1,27 @@
+# Template file for 'perl-Alien'
+pkgname=perl-Alien
+version=0.95
+revision=1
+#wrksrc=
+#create_wrksrc=yes
+#only_for_archs="i686 x86_64"
+build_style=perl-module
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="perl"
+makedepends="perl"
+depends="perl"
+short_desc="Alien - External libraries wrapped up for your viewing pleasure!"
+maintainer="Jasper Chan <jasperchan515@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://metacpan.org/pod/Alien#COPYRIGHT-AND-LICENSE"
+distfiles="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-0.95.tar.gz"
+checksum=fc775e14d5ca38ee0d50d2fa355898291c791456e21197826cd0dc967f37edf2
+
+post_extract() {
+    # Fix wrksrc
+    mv /builddir/Alien-0.95/ "$wrksrc"
+}
