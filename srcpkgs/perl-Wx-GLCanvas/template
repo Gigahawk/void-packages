@@ -1,0 +1,31 @@
+# Template file for 'perl-Wx-GLCanvas'
+pkgname=perl-Wx-GLCanvas
+version=0.09
+revision=1
+#wrksrc=
+#create_wrksrc=yes
+#only_for_archs="i686 x86_64"
+build_style=perl-module
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="perl"
+makedepends="perl-Wx wxWidgets-devel libfreeglut-devel"
+depends="perl-Wx wxWidgets libfreeglut"
+short_desc="Wx::GLCanvas - interface to wxWidgets' OpenGL canvas"
+maintainer="Jasper Chan <jasperchan515@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://metacpan.org/pod/distribution/Wx-GLCanvas/lib/Wx/GLCanvas.pm"
+distfiles="https://cpan.metacpan.org/authors/id/M/MB/MBARBON/Wx-GLCanvas-0.09.tar.gz"
+checksum=6ad2c29ff06ff80a5c8b4b9d1d6bf0aed57489e831be59c94494f4f688dc8fe0
+
+post_extract() {
+    # Fix wrksrc directory
+    mv "/builddir/Wx-GLCanvas-0.09/" "$wrksrc"
+}
+
+do_build() {
+    make
+}
