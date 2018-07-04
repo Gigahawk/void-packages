@@ -1,0 +1,27 @@
+# Template file for 'perl-ExtUtils-XSpp'
+pkgname=perl-ExtUtils-XSpp
+version=0.18
+revision=1
+#wrksrc=
+#create_wrksrc=yes
+#only_for_archs="i686 x86_64"
+build_style=perl-ModuleBuild
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="perl"
+makedepends="perl perl-Module-Build perl-Test-Base perl-Test-Differences"
+depends="perl"
+short_desc="ExtUtils::XSpp - XS for C++"
+maintainer="Jasper Chan <jasperchan515@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://metacpan.org/pod/ExtUtils::XSpp"
+distfiles="https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/ExtUtils-XSpp-0.18.tar.gz"
+checksum=9176ad646729e3bd27cf7abf114bedd3424bff1ba61185cfc7d54f3a9223a8ff
+
+post_extract() {
+    mv /builddir/ExtUtils-XSpp-0.18/ "$wrksrc"
+}
+
