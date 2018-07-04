@@ -1,0 +1,27 @@
+# Template file for 'perl-Alien-wxWidgets'
+pkgname=perl-Alien-wxWidgets
+version=0.69
+revision=1
+#wrksrc=
+#create_wrksrc=yes
+#only_for_archs="i686 x86_64"
+build_style=perl-module
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends="perl"
+makedepends="perl-Module-Pluggable perl-Alien wxWidgets-devel"
+depends="perl"
+short_desc="Alien::wxWidgets - building, finding and using wxWidgets binaries"
+maintainer="Jasper Chan <jasperchan515@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://metacpan.org/pod/Alien::wxWidgets"
+distfiles="https://cpan.metacpan.org/authors/id/M/MD/MDOOTSON/Alien-wxWidgets-0.69.tar.gz"
+checksum=53224e4bbbefff4cf7b63ed9a62963893b9ffd4965d70d96710348f8676de249
+
+post_extract() {
+    # Fix wrksrc
+    mv /builddir/Alien-wxWidgets-0.69/ "$wrksrc"
+}
