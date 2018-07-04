@@ -13,19 +13,20 @@ build_style=perl-module
 #make_dirs="/var/log/dir 0755 root root"
 hostmakedepends="perl pkg-config"
 makedepends="perl-Alien-wxWidgets wxWidgets-devel libstdc++-devel"
-depends="perl perl-Alien-wxWidgets wxWidgets"
+depends="perl wxWidgets perl-Alien-wxWidgets"
 short_desc="Perl interface to the wxWidgets cross-platform GUI toolkit"
 maintainer="Jasper Chan <jasperchan515@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://metacpan.org/pod/release/MDOOTSON/Wx-0.9932/Wx.pm"
 distfiles="https://cpan.metacpan.org/authors/id/M/MD/MDOOTSON/Wx-0.9932.tar.gz"
 checksum=1cfdb6535a0f4676e6f1aab2c9d8e16d577be3eb3b7cc04c8074d685e6651b70
-make_build_args="CC=gcc CPP=g++ CXX=g++ LD=g++"
-
 
 post_extract() {
     # Fix wrksrc directory
     mv "/builddir/Wx-0.9932/" "$wrksrc"
 }
 
-
+do_build() {
+    # Original do_build() doesn't seem to support C++ compilation
+    make
+}
