@@ -2,7 +2,7 @@
 pkgname=perl-OpenGL
 version=0.70
 revision=1
-#wrksrc=
+wrksrc="OpenGL-${version}"
 #create_wrksrc=yes
 #only_for_archs="i686 x86_64"
 build_style=perl-module
@@ -18,18 +18,6 @@ short_desc="Wrapper library that allows OpenGL to be used in Perl"
 maintainer="Jasper Chan <jasperchan515@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://metacpan.org/pod/release/CHM/OpenGL-0.70/OpenGL.pod"
-#distfiles="https://cpan.metacpan.org/authors/id/C/CH/CHM/OpenGL-0.70.tar.gz>perl-OpenGL-0.70.tar.gz"
-distfiles="https://github.com/Gigahawk/perl-OpenGL/archive/0.70_4.tar.gz>perl-OpenGL-0.70.tar.gz"
-checksum=406f59f94b9dc821484f506acf628eaa26fcb3fe349f43095f19572f0182ad38
+distfiles="https://cpan.metacpan.org/authors/id/C/CH/CHM/OpenGL-0.70.tar.gz>perl-OpenGL-0.70.tar.gz"
+checksum="b20e2af4404b4901ab35bba6ad5e3a8aa60bff72413c99288f01018c4cf874e0"
 
-post_extract() {
-    # Fix wrksrc directory
-    #mv "/builddir/OpenGL-0.70/" "$wrksrc"
-    mv "$wrksrc"_4 "$wrksrc"
-    echo post_extract
-}
-
-do_configure() {
-    # Do nothing, package comes pre-configured
-    :
-}
