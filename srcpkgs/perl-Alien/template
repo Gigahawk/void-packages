@@ -10,7 +10,7 @@ noarch=yes
 short_desc="Alien - External libraries wrapped up for your viewing pleasure!"
 maintainer="Jasper Chan <jasperchan515@gmail.com>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
-homepage="https://metacpan.org/pod/Alien"
+homepage="https://metacpan.org/release/Alien"
 distfiles="${CPAN_SITE}/Alien/${pkgname#perl-}-${version}.tar.gz"
 checksum=fc775e14d5ca38ee0d50d2fa355898291c791456e21197826cd0dc967f37edf2
 
