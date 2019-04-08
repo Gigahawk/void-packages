@@ -3447,3 +3447,4 @@ liblcf.so.0 liblcf-0.6.0_1
 libWildMidi.so.2 WildMidi-0.4.3_1
 liboblibs.so.0.0 oblibs-0.0.1.1_1
 libsepol.so.1 libsepol-2.9_1
+libselinux.so.1 libselinux-2.9_1
