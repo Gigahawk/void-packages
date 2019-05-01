@@ -1,0 +1,36 @@
+# Template file for 'geogram'
+pkgname=geogram
+version=1.6.11
+revision=1
+wrksrc=geogram_${version}
+#create_wrksrc=yes
+#archs="i686 x86_64"
+#build_style=configure
+build_style=cmake
+configure_script="./configure.sh"
+configure_args=" -DCMAKE_BUILD_TYPE:STRING=Release -DVORPALINE_PLATFORM:STRING=Linux64-gcc-dynamic"
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+#make_cmd="cd build/Linux64-gcc-dynamic-Release/ && make"
+hostmakedepends="cmake"
+makedepends="glfw-devel libgomp-devel"
+depends=""
+short_desc="Programming library of geometric algorithms"
+maintainer="Jasper Chan <jasperchan515@gmail.com>"
+license="BSD-3-Clause"
+homepage="http://alice.loria.fr/index.php/software/4-library/75-geogram.html"
+distfiles="https://gforge.inria.fr/frs/download.php/file/37934/geogram_1.6.11.tar.gz"
+checksum=5d823eb8bc3b34cc5c7abd78320a81e7e79ae16374a9706a7069d53ca032caf6
+
+geogram-devel_package() {
+	depends+="${makedepends} ${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/cmake
+		vmove "usr/lib/*.so"
+	}
+}
+
