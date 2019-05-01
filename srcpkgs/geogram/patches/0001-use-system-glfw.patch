@@ -1,0 +1,19 @@
+From 016697026c5248c2fcd795cec68547ff199d43aa Mon Sep 17 00:00:00 2001
+From: Jasper Chan <jasperchan515@gmail.com>
+Date: Tue, 30 Apr 2019 22:41:58 -0700
+Subject: [PATCH] use system glfw
+
+---
+ CMakeOptions.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git CMakeOptions.txt CMakeOptions.txt
+index a44f87e..f880747 100644
+--- CMakeOptions.txt
++++ CMakeOptions.txt
+@@ -1 +1,2 @@
+ set(CPACK_GENERATOR RPM)
++set(GEOGRAM_USE_SYSTEM_GLFW3 ON)
+-- 
+2.21.0
+
