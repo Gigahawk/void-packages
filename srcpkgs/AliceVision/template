@@ -1,0 +1,22 @@
+# Template file for 'AliceVision'
+pkgname=AliceVision
+version=2.1.0
+revision=1
+#wrksrc=
+#create_wrksrc=yes
+#archs="i686 x86_64"
+build_style=cmake
+#configure_args=""
+#make_build_args=""
+#make_install_args=""
+#conf_files=""
+#make_dirs="/var/log/dir 0755 root root"
+hostmakedepends=""
+makedepends="boost-devel eigen ceres-solver-devel libopenexr-devel openimageio-devel geogram-devel zlib-devel"
+depends=""
+short_desc="Photogrammetric Computer Vision Framework"
+maintainer="Jasper Chan <jasperchan515@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://alicevision.github.io/"
+distfiles="https://github.com/alicevision/AliceVision/archive/v${version}.tar.gz"
+checksum=37699927b94fb0460913787af8a4c4db3b1e4b8134168cca07281782ce45fdf3
