@@ -11,7 +11,11 @@ build_style=cmake
 #make_install_args=""
 #conf_files=""
 #make_dirs="/var/log/dir 0755 root root"
+<<<<<<< HEAD
 hostmakedepends="git"
+=======
+hostmakedepends=""
+>>>>>>> 58b01d03899dd0e8b7fd0913a9ea70a00a5a490b
 makedepends="boost-devel eigen ceres-solver-devel libopenexr-devel openimageio-devel geogram-devel zlib-devel"
 depends=""
 short_desc="Photogrammetric Computer Vision Framework"

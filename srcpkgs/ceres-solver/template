@@ -17,7 +17,11 @@ post_install() {
 }
 
 ceres-solver-devel_package() {
+<<<<<<< HEAD
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
+=======
+	depends+="${makedepends} ${sourcepkg}>=${version}_${revision}"
+>>>>>>> 58b01d03899dd0e8b7fd0913a9ea70a00a5a490b
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
