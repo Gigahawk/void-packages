@@ -25,7 +25,7 @@ distfiles="https://gforge.inria.fr/frs/download.php/file/37934/geogram_1.6.11.ta
 checksum=5d823eb8bc3b34cc5c7abd78320a81e7e79ae16374a9706a7069d53ca032caf6
 
 geogram-devel_package() {
-	depends+="${makedepends} ${sourcepkg}>=${version}_${revision}"
+	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
